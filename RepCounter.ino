@@ -138,10 +138,58 @@ void checkForRep() {
     
 
     if (mode == 7) {
+      
+      if (barPlateTrackers > 45) {
+
+        lcd.clear();
+        lcd.print("Closer to Butt");
+        
+        
+      } else if (barPlateTrackers < 30) {
+
+
+        lcd.clear();
+        lcd.print("Farther");
+
+        
+      } else if ((barPlateTrackers > 30) && (barPlateTrackers < 45)) {
+
+        lcd.clear();
+        lcd.print("Perfect");
+
+        runDeadLiftPart1();
+        delay(1000);
+        lcd.clear();
+        return 0;
+      }
 
       
 
     } else if (mode == 8) {
+      
+      if (barPlateTrackers > 45) {
+
+        lcd.clear();
+        lcd.print("Closer to Plates");
+        
+        
+      } else if (barPlateTrackers < 30) {
+
+
+        lcd.clear();
+        lcd.print("Farther");
+
+        
+      } else if ((barPlateTrackers > 30) && (barPlateTrackers < 45)) {
+
+        lcd.clear();
+        lcd.print("Perfect");
+
+        runDeadLiftPart1();
+        delay(1000);
+        lcd.clear();
+        return 0;
+      }
 
       
       
